@@ -47,7 +47,7 @@ function viewcity (city) {
         } else { 
         document.querySelector(".city-name").innerHTML = data.name
         document.querySelector('.status').innerHTML = data.weather[0].description
-        document.querySelector(".weather-icon").innerHTML = `<img src="/weather-icon/${data.weather[0].icon}.png">`
+        document.querySelector(".weather-icon").innerHTML = `<img src="../weather-icon/${data.weather[0].icon}.png">`
         document.querySelector('.humidity').innerHTML = `${data.main.humidity} %`
         document.querySelector('.temp').innerHTML = ` ${Math.round(data.main.temp)} ℃`
         document.querySelector('.vision').innerHTML = `${data.visibility} м` 

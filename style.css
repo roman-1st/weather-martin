@@ -10,7 +10,7 @@ body {
   
 body::after {
     content: "";
-    background: url("/pic/background3.jpeg");
+    background: url("../pic/background3.jpeg");
     background-size: cover;
     opacity: 0.8;
     top: 0;
