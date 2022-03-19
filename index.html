@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-martin</title>
+    <script src="script.js"></script>
+    <script ></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- <img src="/pic/background3.jpeg"> -->
+    <header> 
+        <div> 
+            <h2> Прогноз погоды от компании "Мартин"</h2>
+        
+                <h3> Необходимо указать город </h3>
+                <input  id='searchcity' value="" placeholder="Введите город"> 
+                <button class="submit" onclick="search()"> Показать погоду </button>
+        </div>
+    </header>
+    <main> 
+        
+        <div class="menu"> 
+            <div class="main-header"> 
+                <div> 
+                    <h2 class="city-name"> Город не выбран </h2>
+                    <p class="time"> </p>
+                    <p class="sky"> </p>
+                    <div class="Wstatus"> 
+                        <h4 class="status"> </h4>
+                        <p class="weather-icon"> </p> 
+                    </div>
+                    
+                    
+                </div>
+                
+                <div> 
+                    <table class="weather-table">
+                        <tr> <td> Температура </td> <td> <img  class='f1' src="/pic/term.png">  </td> <td class="temp"> </td></tr>
+                        <tr> <td> Влажность </td> <td> <img  class='f1' src="/pic/humidity.png">  </td> <td class="humidity"> </td></tr>
+                        <tr> <td> Давление </td> <td> <img  class='f1' src="/pic/pressure.png">  </td> <td class="pressure"> </td></tr>
+                        <tr> <td> Видимость </td> <td> <img  class='f1' src="/pic/vision.png">  </td> <td class="vision"> </td></tr>
+                        <tr> <td> Ветер </td> <td> <img  class='f1' src="/pic/wind.png">  </td> <td class="wind"> </td></tr>
+                        <tr> <td> Направление ветра </td> <td> <img  class='f1' src="/pic/wind-compas.png">  </td> <td class="wind-compas"> </td></tr>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
