@@ -5,10 +5,12 @@
 } */
 
 body {
-    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Marmelad', sans-serif;
+    background: rgb(223, 223, 223);
+    color: rgb(78, 77, 77);
   }
   
-body::after {
+/* body::after {
     content: "";
     background: url("pic/background3.jpeg");
     background-size: cover;
@@ -19,15 +21,17 @@ body::after {
     right: 0;
     position: absolute;
     z-index: -1;    
-}
+} */
 
 header{
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(201, 199, 199);
+    
 }
 
 header div {
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: rgb(66, 65, 65);
 }
 
 #searchcity {
@@ -39,6 +43,7 @@ header div {
     background-color: rgba(225, 245, 248, 0.5);
     width: 30%;
     margin-right: 5px;
+    font-family: 'Marmelad', sans-serif;
 }
   
 .submit {
@@ -48,6 +53,7 @@ header div {
     box-shadow:4px 4px 10px rgba(0,0,0,0.1);
     background-color: rgba(225, 245, 248, 0.5);
     margin-left: 5px;
+    font-family: 'Marmelad', sans-serif;
 }
   
 .submit:hover {
@@ -70,19 +76,20 @@ main {
 }
 
 .menu {
-    background: rgba(246, 247, 248, 0.3);
+    background-color: rgba(221, 221, 221, 0.733);
     margin-top: 20px;
     border: 1px solid rgb(139, 139, 139);
     border-radius: 20px;
-    width: 75%;
+    width: 85%;
     font-size: 20px;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.1);
 }
 
 .main-header {
     display: flex;
     justify-content: space-around;
-    align-items: center;
     flex-wrap: wrap;
+    padding-left: 0;
 }
 
 .Wstatus{
@@ -100,5 +107,15 @@ main {
     margin: 10%;
     border-collapse: separate;
     border-spacing: 20px 10px;
+    margin-left: 0;
 }
 
+footer {
+    border-top: 1px solid rgb(201, 199, 199);
+    margin-top: 20px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}

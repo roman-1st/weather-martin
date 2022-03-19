@@ -28,6 +28,8 @@ function search() {
 
 
 function viewcity (city) {
+    // тут был селектор выбора городов из JSON, однако, он сейчас не нужен ввиду ввода города пользователем 
+
     // let select = document.querySelector("#select")
     // city.forEach(c => {
     //     let option = document.createElement('option')
