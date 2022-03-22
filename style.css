@@ -1,28 +1,8 @@
-/* body::after {
-    background: rgb(100, 162, 206) url("/pic/background3.jpeg");
-    background-size:cover;
-    font-family: 'EB Garamond', serif;
-} */
-
 body {
-    font-family: 'Marmelad', sans-serif;
-    /* background: rgb(223, 223, 223); */
+    font-family: 'Raleway', sans-serif;
     color: rgb(78, 77, 77);
     background: linear-gradient( 315deg, rgb(207, 223, 252), rgb(250, 238, 225));
-  }
-  
-/* body::after {
-    content: "";
-    background: url("pic/background3.jpeg");
-    background-size: cover;
-    opacity: 0.8;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;    
-} */
+}
 
 header{
     padding-bottom: 20px;
@@ -38,22 +18,23 @@ header div {
 #searchcity {
     padding:15px;
     border-radius:15px;
-    border:0;
+    border: 1px solid rgb(139, 139, 139);
     box-shadow:4px 4px 10px rgba(0,0,0,0.1);
     background-color: rgba(248, 239, 225, 0.2);
     width: 30%;
     margin-right: 5px;
     font-family: 'Marmelad', sans-serif;
+    outline: 0;
 }
   
 #submit {
     padding:15px;
     border-radius:15px;
-    border:0;
     box-shadow:4px 4px 10px rgba(0,0,0,0.1);
     background-color: rgba(250, 239, 218, 0.2);
     margin-left: 5px;
     font-family: 'Marmelad', sans-serif;
+    border: 1px solid rgb(139, 139, 139);
 }
   
 #submit:hover {
