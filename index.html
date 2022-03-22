@@ -2,7 +2,6 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
- 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather-martin</title>
     <script src="script.js"></script>
@@ -13,21 +12,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- <img src="/pic/background3.jpeg"> -->
     <header> 
         <div> 
-            <h2> Прогноз погоды от компании "Мартин"</h2>
+            <h2> Прогноз погоды от компании "Мартин" </h2>
+            <h3> Показываем погоду на 5 дней</h3>
         
-                <h3> Необходимо указать город </h3>
+                <h4> Необходимо указать город </h4>
                 <input  id='searchcity' value="" placeholder="Введите город"> 
-                <button class="submit" onclick="search()"> Показать погоду </button>
+                <button id="submit" onclick="search()"> Показать погоду </button>
         </div>
     </header>
     <main> 
-        
         <div class="menu"> 
             <div class="main-header"> 
-                <div> 
+                <div class="block-one"> 
                     <h2 class="city-name"> Город не выбран </h2>
                     <p class="time"> </p>
                     <p class="sky"> </p>
@@ -35,10 +33,7 @@
                         <h4 class="status"> </h4>
                         <p class="weather-icon"> </p> 
                     </div>
-                    
-                    
                 </div>
-                
                 <div> 
                     <table class="weather-table">
                         <tr> <td> <img src="pic/term.png"> </td> <td> Температура </td> <td class="temp"> </td></tr>
@@ -47,14 +42,41 @@
                         <tr> <td> <img src="pic/vision.png"> </td> <td> Видимость   </td> <td class="vision"> </td></tr>
                         <tr> <td> <img src="pic/wind.png"> </td> <td> Ветер </td> <td class="wind"> </td></tr>
                         <tr> <td> <img src="pic/wind-compas.png"> </td> <td> Направление ветра </td> <td class="wind-compas"> </td></tr>
-                </table>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="dayafter"> 
+            <div class="tomorrow">  Завтра 
+                <h4 class="status1"> Статус </h4>
+                <p class="pic1">  </p> 
+                <p class="temp1"> Темпертарута днем </p>
+                <p class="tempN1"> Темпертарута ночью </p>
+            </div>
+            <div class="tomorrow">  Послезавтра
+                <h4 class="status2"> Статус </h4>
+                <p class="pic2">  </p> 
+                <p class="temp2"> Темпертарута днем </p>
+                <p class="tempN2"> Темпертарута ночью </p>
+            </div>
+            <div class="tomorrow">  Через 2 дня 
+                <h4 class="status3"> Статус </h4>
+                <p class="pic3">  </p> 
+                <p class="temp3"> Темпертарута днем </p>
+                <p class="tempN3"> Темпертарута ночью </p>
+            </div>
+            <div class="tomorrow">  Через 3 дня  
+                <h4 class="status4"> Статус </h4>
+                <p class="pic4">  </p> 
+                <p class="temp4"> Темпертарута днем </p>
+                <p class="tempN4"> Темпертарута ночью </p>
             </div>
         </div>
     </main>
     <footer> 
-        <p> <a href="https://www.gismeteo.ru/"> Сравнить на Гисметео </a></p>
-        <p> <a href="https://github.com/roman-1st?tab=repositories"> Ссылочка на GitHub</a></p>
-        <p> <a href="https://yandex.ru/pogoda/"> Сравнить на Яндекс.Погоде</a></p>
+        <p> <a class="links" href="https://www.gismeteo.ru/"> Сравнить на Гисметео </a></p>
+        <p> <a class="links" href="https://github.com/roman-1st?tab=repositories"> Ссылочка на GitHub</a></p>
+        <p> <a class="links" href="https://yandex.ru/pogoda/"> Сравнить на Яндекс.Погоде</a></p>
     </footer>
 </body>
 </html>

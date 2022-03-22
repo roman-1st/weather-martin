@@ -6,8 +6,9 @@
 
 body {
     font-family: 'Marmelad', sans-serif;
-    background: rgb(223, 223, 223);
+    /* background: rgb(223, 223, 223); */
     color: rgb(78, 77, 77);
+    background: linear-gradient( 315deg, rgb(207, 223, 252), rgb(250, 238, 225));
   }
   
 /* body::after {
@@ -25,7 +26,7 @@ body {
 
 header{
     padding-bottom: 20px;
-    border-bottom: 1px solid rgb(201, 199, 199);
+    border-bottom: 1px solid rgb(180, 178, 178);
     
 }
 
@@ -35,28 +36,27 @@ header div {
 }
 
 #searchcity {
-    resize: vertical;
     padding:15px;
     border-radius:15px;
     border:0;
     box-shadow:4px 4px 10px rgba(0,0,0,0.1);
-    background-color: rgba(225, 245, 248, 0.5);
+    background-color: rgba(248, 239, 225, 0.2);
     width: 30%;
     margin-right: 5px;
     font-family: 'Marmelad', sans-serif;
 }
   
-.submit {
+#submit {
     padding:15px;
     border-radius:15px;
     border:0;
     box-shadow:4px 4px 10px rgba(0,0,0,0.1);
-    background-color: rgba(225, 245, 248, 0.5);
+    background-color: rgba(250, 239, 218, 0.2);
     margin-left: 5px;
     font-family: 'Marmelad', sans-serif;
 }
   
-.submit:hover {
+#submit:hover {
       background-color: rgb(221, 250, 255);
 }
   
@@ -72,16 +72,17 @@ header div {
 main {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .menu {
-    background-color: rgba(221, 221, 221, 0.733);
+    background-color: rgba(232, 248, 255, 0.2);
     margin-top: 20px;
     border: 1px solid rgb(139, 139, 139);
     border-radius: 20px;
     width: 85%;
-    font-size: 20px;
+    font-size: 16px;
     box-shadow:4px 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -90,6 +91,10 @@ main {
     justify-content: space-around;
     flex-wrap: wrap;
     padding-left: 0;
+}
+
+.block-one {
+    margin-top: 10px;
 }
 
 .Wstatus{
@@ -110,12 +115,36 @@ main {
     margin-left: 0;
 }
 
+.dayafter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.tomorrow {
+    width: 250px;
+    text-align: center;
+    border: 1px solid rgb(139, 139, 139);
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgba(232, 248, 255, 0.2);
+    box-shadow:4px 4px 10px rgba(0,0,0,0.1);
+}
+
 footer {
-    border-top: 1px solid rgb(201, 199, 199);
+    border-top: 1px solid rgb(180, 178, 178);
     margin-top: 20px;
     padding-top: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.links {
+    color: rgb(78, 77, 77);
 }
