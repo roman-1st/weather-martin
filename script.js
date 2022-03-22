@@ -1,10 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     search()
+    viewcity (city)
 })
+
+let city = 'Санкт-Петербург'
 
 function search() {
     document.querySelector("#submit").addEventListener("click", () => {
-        let city = document.getElementById('searchcity').value
+        city = document.getElementById('searchcity').value
         console.log(city);
         viewcity (city) 
         viewcitytomottow (city)
