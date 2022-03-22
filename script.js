@@ -61,6 +61,8 @@ function viewcity (city) {
                     document.querySelector(".temp4").innerHTML = `Днем ${Math.round(datatomorrow.daily[4].temp.day)} ℃`
                     document.querySelector(".tempN4").innerHTML = `Ночью ${Math.round(datatomorrow.daily[4].temp.night)} ℃`
 
+                    document.querySelector('.dayafter').style.display = 'flex'
+
                     console.log(datatomorrow.daily);
                 })
             }
