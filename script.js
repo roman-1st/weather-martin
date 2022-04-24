@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     search(city)
-    getGeolocation()
+    getGeolocation() 
 })
 
 let city
