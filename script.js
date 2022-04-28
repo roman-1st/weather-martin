@@ -1,8 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
     search(city)
     getGeolocation() 
-
 })
+
+let cityName = document.querySelector(".city-name")
+let cityStatus = document.querySelector(".status")
+let cityWeatherIcon = document.querySelector(".weather-icon")
+let cityHumidity = document.querySelector('.humidity')
+let cityTemp = document.querySelector('.temp')
+let cityVision = document.querySelector('.vision')
+let cityWind = document.querySelector('.wind')
+let cityPressure = document.querySelector('.pressure')
+let citySky = document.querySelector('.sky')
 
 let city
 
@@ -10,7 +19,7 @@ function search() {
     document.querySelector("#submit").addEventListener("click", () => {
         city = document.getElementById('searchcity').value
         console.log(city);
-        viewresult (city) 
+        actualapi (city) 
     })
     document.querySelector("#searchcity").addEventListener("keydown", (event) => {
         if(event.keyCode === 13) {
@@ -45,27 +54,28 @@ let actualapi = async (city, coords) => {
             if(data.name == undefined) {
                 alert('В названии города ошибка =(')
             } else { 
-                document.querySelector(".city-name").innerHTML = data.name
-                document.querySelector(".status").innerHTML = data.weather[0].description
-                document.querySelector(".weather-icon").innerHTML = `<img src="weather-icon/${data.weather[0].icon}.png">`
-                document.querySelector('.humidity').innerHTML = `${data.main.humidity} %`
-                document.querySelector('.temp').innerHTML = ` ${Math.round(data.main.temp)} ℃`
-                document.querySelector('.vision').innerHTML = `${data.visibility}м` 
-                document.querySelector('.wind').innerHTML = `${Math.round(data.wind.speed)} м/с`
-                document.querySelector('.pressure').innerHTML = `${(data.main.pressure / 1.333).toFixed(2)} мм рт.ст.` 
-                document.querySelector('.sky').innerHTML = `облачность ${data.clouds.all} %`
+                cityName.innerHTML = data.name
+                cityStatus.innerHTML = data.weather[0].description
+                cityWeatherIcon.innerHTML = `<img src="weather-icon/${data.weather[0].icon}.png">`
+                cityHumidity.innerHTML = `${data.main.humidity} %`
+                cityTemp.innerHTML = ` ${Math.round(data.main.temp)} ℃`
+                cityVision.innerHTML = `${data.visibility}м` 
+                cityWind.innerHTML = `${Math.round(data.wind.speed)} м/с`
+                cityPressure.innerHTML = `${(data.main.pressure / 1.333).toFixed(2)} мм рт.ст.` 
+                citySky.innerHTML = `облачность ${data.clouds.all} %`
                 citywind(data)
                 citytime(data)
+                console.log(data);
         
                 fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&lang=ru&exclude=current,minutely,hourly,alerts&appid=8f0125d0dac4558db68403baec52a642&units=metric`)
                     .then(function (a) { return a.json() })
                     .then(function (datatomorrow) {
 
-                        function addtohtml (a,b,c,d,e) {
-                            document.querySelector(a).innerHTML = datatomorrow.daily[e].weather[0].description
-                            document.querySelector(b).innerHTML = `<img src="weather-icon/${datatomorrow.daily[e].weather[0].icon}.png">`
-                            document.querySelector(c).innerHTML = `Днем ${Math.round(datatomorrow.daily[e].temp.day)} ℃`
-                            document.querySelector(d).innerHTML = `Ночью ${Math.round(datatomorrow.daily[e].temp.night)} ℃`
+                        function addtohtml (a,b,c,d,num) {
+                            document.querySelector(a).innerHTML = datatomorrow.daily[num].weather[0].description
+                            document.querySelector(b).innerHTML = `<img src="weather-icon/${datatomorrow.daily[num].weather[0].icon}.png">`
+                            document.querySelector(c).innerHTML = `Днем ${Math.round(datatomorrow.daily[num].temp.day)} ℃`
+                            document.querySelector(d).innerHTML = `Ночью ${Math.round(datatomorrow.daily[num].temp.night)} ℃`
                         }
                 
                     addtohtml(".status1", ".pic1", ".temp1", ".tempN1", 1)
