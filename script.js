@@ -65,7 +65,6 @@ let actualapi = async (city, coords) => {
                 citySky.innerHTML = `облачность ${data.clouds.all} %`
                 citywind(data)
                 citytime(data)
-                console.log(data);
         
                 fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&lang=ru&exclude=current,minutely,hourly,alerts&appid=8f0125d0dac4558db68403baec52a642&units=metric`)
                     .then(function (a) { return a.json() })
