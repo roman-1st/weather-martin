@@ -1,7 +1,7 @@
 body {
     font-family: 'Raleway', sans-serif;
     color: rgb(78, 77, 77);
-    background: linear-gradient( 315deg, rgb(207, 223, 252), rgb(250, 238, 225));
+    background: linear-gradient( 180deg, rgb(177, 204, 255), rgb(255, 222, 186));
 }
 
 header{
@@ -106,12 +106,14 @@ main {
 }
 
 .tomorrow {
-    width: 250px;
+    width: 300px;
     text-align: center;
     border: 1px solid rgb(139, 139, 139);
     border-radius: 20px;
     padding: 10px;
     margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     background-color: rgba(232, 248, 255, 0.2);
     box-shadow:4px 4px 10px rgba(0,0,0,0.1);
 }
