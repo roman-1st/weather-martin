@@ -15,6 +15,9 @@ let citySky = document.querySelector('.sky')
 
 let city
 
+// let cityplaceholder = document.querySelector("#searchcity").placeholder
+// cityplaceholder = ''
+
 function search() {
     document.querySelector("#submit").addEventListener("click", () => {
         city = document.getElementById('searchcity').value
@@ -32,7 +35,10 @@ function search() {
 function getGeolocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((v) => {
-            actualapi(null, v.coords)
+
+            actualapi(null, v.coords);
+            console.log();
+
         }, (error) => {
             console.error(error)
         });
@@ -43,6 +49,7 @@ function getGeolocation() {
 
 let actualapi = async (city, coords) => {
     let api = ''
+    
     if (city) {
         api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&appid=8f0125d0dac4558db68403baec52a642&units=metric`
     } else {
@@ -54,6 +61,8 @@ let actualapi = async (city, coords) => {
             if(data.name == undefined) {
                 alert('В названии города ошибка =(')
             } else { 
+                document.querySelector("#searchcity").placeholder = `${data.name}`
+
                 cityName.innerHTML = data.name
                 cityStatus.innerHTML = data.weather[0].description
                 cityWeatherIcon.innerHTML = `<img src="weather-icon/${data.weather[0].icon}.png">`
@@ -65,6 +74,8 @@ let actualapi = async (city, coords) => {
                 citySky.innerHTML = `облачность ${data.clouds.all} %`
                 citywind(data)
                 citytime(data)
+                
+                console.log(data);
         
                 fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&lang=ru&exclude=current,minutely,hourly,alerts&appid=8f0125d0dac4558db68403baec52a642&units=metric`)
                     .then(function (a) { return a.json() })
